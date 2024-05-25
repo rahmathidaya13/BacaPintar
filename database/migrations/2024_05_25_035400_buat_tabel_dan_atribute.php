@@ -31,13 +31,14 @@ return new class extends Migration
             $table->id('id_peminjaman');
             $table->date('tgl_peminjaman');
             $table->date('tgl_pengembalian');
+            $table->decimal('harga',10,2);
             $table->string('status', 50);
             $table->timestamps();
         });
         Schema::create('pengembalian_buku', function(Blueprint $table){
             $table->id('id_pengembalian');
             $table->date('tgl_pengembalian');
-            $table->decimal('denda');
+            $table->decimal('denda',10,2);
             $table->timestamps();
         });
         Schema::create('ulasan', function(Blueprint $table){
