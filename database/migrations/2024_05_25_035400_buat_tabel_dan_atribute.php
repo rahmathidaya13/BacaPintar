@@ -18,6 +18,8 @@ return new class extends Migration
             $table->string('penerbit',50);
             $table->date('tahun_terbit');
             $table->integer('stok_buku');
+            $table->decimal('harga',10,2);
+            $table->string('photo')->nullable(true);
             $table->timestamps();
         });
 
